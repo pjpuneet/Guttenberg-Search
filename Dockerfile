@@ -4,6 +4,10 @@ FROM node:carbon
 # Setup app working directory
 WORKDIR /usr/src/app
 
+# Add Env Variables for Cloud Run
+ENV PORT 80
+ENV HOST 0.0.0.0
+
 # Copy package.json and package-lock.json
 COPY package*.json ./
 
